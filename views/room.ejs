@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        const ROOM_ID = "<%= roomid %>"
-    </script>
+
     <script src="https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js" defer></script>
     <script src="/socket.io/socket.io.js" defer></script>
+
+    <script defer>
+        const ROOM_ID = "<%= roomid %>"
+    </script>
+
+    <!-- <script src="script.js" defer></script> -->
     <script src="script.js" defer></script>
+    <script src="HandleCall.js" defer></script>
+    <script src="SocketHandler.js" defer></script> 
+
     <title>Document</title>
     <style>
         #video-grid {
@@ -31,7 +38,9 @@
 
 <body>
     <div id="contianer">
-        <div id="video-grid"></div>
+        <div id="video-grid">
+            <video id="myVideo"></video>
+        </div>
 
 
         <button id="copy-txt">Copy</button>

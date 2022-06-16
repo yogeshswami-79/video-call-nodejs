@@ -25,7 +25,7 @@ io.on("connection",socket=>{
 
         console.log(`connected uid: ${uid}`)
 
-        io.to(roomId).emit('user-connected', uid);
+        socket.to(roomId).emit('user-connected', uid);
 
         socket.on('disconnect', ()=>{
             console.log(`disConnected : ${uid}`)
