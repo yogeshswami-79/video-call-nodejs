@@ -38,10 +38,10 @@
     overflow: scroll;
     left: 100%;
     display: grid;
-    height: 500px;
+    height: auto;
     width: auto;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-columns: repeat(auto-fill, 80px);
     grid-auto-columns: 80px;
 }
 
