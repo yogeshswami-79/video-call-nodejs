@@ -14,33 +14,27 @@
     </script>
 
     <!-- <script src="script.js" defer></script> -->
-    <script src="script.js" defer></script>
-    <script src="CallHandler.js" defer></script>
-    <script src="SocketHandler.js" defer></script> 
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/CallHandler.js" defer></script>
+    <script src="scripts/SocketHandler.js" defer></script>
 
-    <title>Document</title>
-    <style>
-        #video-grid {
-            display: grid;
-            height: auto;
-            width: auto;
-            grid-template-columns: repeat(auto-fill, 300px);
-            grid-auto-rows: 300px;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Group VideoCall</title>
 </head>
 
 <body>
     <div id="contianer">
-        <div id="video-grid">
-            <video id="myVideo"></video>
+
+        <div id="media-container">
+            <video id="media-view" src="http://clips.vorwaerts-gmbh.de/VfE.webm" controls></video>
+
         </div>
+        <div id="video-grid">
+
+        </div>
+
+        <video id="myVideo"></video>
 
 
         <button id="copy-txt">Copy</button>
