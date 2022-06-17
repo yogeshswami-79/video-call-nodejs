@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 #container{
     position: absolute;
     display: block;
@@ -38,16 +41,16 @@
     overflow: scroll;
     left: 100%;
     display: grid;
-    height: auto;
+    height: 480px;
     width: auto;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, 80px);
+    grid-template-columns: repeat(auto-fill, 120px);
     grid-auto-columns: 80px;
 }
 
 video {
     width: 100%;
-    height: 100%;
+    height: 80px;
     z-index: 10;
     object-fit: cover;
     border-radius: 4px;
@@ -58,8 +61,26 @@ video {
     margin: 0;
     padding: 0;
     top: 2%;
-    left: 93%;
+    left: 92.5%;
     width: 72px;
     height: 72px;
     border-radius: 50px;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 99%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes fade {
+    100%{
+        opacity: 0%;
+    }
 }
