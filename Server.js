@@ -7,7 +7,10 @@ const PORT = process.env.PORT || 3000
 const { PeerServer } = require("peer")
 
 // Init PeerServer Instance
-PeerServer(server)
+PeerServer({
+    hostname:"/",
+    port:'3001'
+})
 
 // set app ViewEngine to ejs
 app.set('view engine', 'ejs')

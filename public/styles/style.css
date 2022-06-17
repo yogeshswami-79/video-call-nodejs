@@ -34,13 +34,15 @@
 #video-grid {
     padding: 10px;
     position: absolute;
-    top: 100%;
+    top: 12%;
+    overflow: scroll;
+    left: 100%;
     display: grid;
-    height: auto;
-    justify-content: space-between;
+    height: 500px;
     width: auto;
-    grid-template-columns: repeat(auto-fill, 150px);
-    grid-auto-rows: 100px;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-auto-columns: 80px;
 }
 
 video {
