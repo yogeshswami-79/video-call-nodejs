@@ -5,6 +5,7 @@ const socket = io("/")
 const peer = new Peer()
 let hidden = false
 
+
 const requestStream = async () => navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 
 let videoGrid = document.getElementById("video-grid")
@@ -40,7 +41,7 @@ const removeVideo = (id) => {
     myVideo.addEventListener('loadedmetadata', () => myVideo.play())
     myVideo.addEventListener('click', updateVisibility)
     myVideo.srcObject = await requestStream()
-
+    requestStreamA()
 })()
 
 
