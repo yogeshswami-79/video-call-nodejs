@@ -4,13 +4,15 @@ const server = require("http").Server(app)
 const io = require("socket.io")(server,{cors: {origin: "*"}})
 const homeRoute = require("./Routes/mainRoute")
 const PORT = process.env.PORT || 3001
-const { PeerServer } = require("peer")
+const { PeerServer, ExpressPeerServer } = require("peer")
 
 // Init PeerServer Instance
 PeerServer({
     hostname:"/",
+    path:'/peer',
     port:'3002'
 })
+
 
 // set app ViewEngine to ejs
 app.set('view engine', 'ejs')
@@ -18,9 +20,9 @@ app.set('view engine', 'ejs')
 // app Static Route to public folder
 app.use(express.static('public'))
 
-
 // Handle main Route
-app.use("/", homeRoute)
+// app.use("/", homeRoute)
+
 
 // Handle Socket events
 const handleSocket = socket => {
