@@ -34,7 +34,7 @@ const handleSocket = socket => {
         // socket.on('message', (id, data) => { socket.to(roomId).emit("msg", { id, data }) })
         
         // BroadCast userConnected to room
-        io.to(roomId).emit('user-connected', uid);
+        socket.to(roomId).emit('newUser', uid);
 
         // ON user disconnected
         socket.on('disconnect', () => {
