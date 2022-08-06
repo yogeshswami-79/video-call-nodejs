@@ -12,7 +12,9 @@ const { ExpressPeerServer, PeerServer } = require("peer")
 // })
 
 // Init PeerServer Instance
-app.use(ExpressPeerServer(server,{debug:true}))
+// app.use(ExpressPeerServer(server,{
+//     debug:true,
+// }))
 
 
 // Handle Socket events
