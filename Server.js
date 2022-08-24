@@ -3,19 +3,7 @@ const app = express()
 const server = require("http").Server(app)
 const io = require("socket.io")(server,{cors: {origin: "*"}})
 const PORT = process.env.PORT || 3001
-const { ExpressPeerServer, PeerServer } = require("peer")
-
-// PeerServer({
-//     host:'localhost',
-//     path:'/peer',
-//     port:'3002'
-// })
-
-// Init PeerServer Instance
-// app.use(ExpressPeerServer(server,{
-//     debug:true,
-// }))
-
+// const { ExpressPeerServer, PeerServer } = require("peer")
 
 // Handle Socket events
 const handleSocket = socket => {
